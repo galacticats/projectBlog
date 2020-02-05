@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Article List</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hello, World: A Project Blog</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Articles</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    {% for article in articles %}
+      <div class="articleBox">
+        <h2><a href="#">{{article.title}}</a></h2>
+        <p>{{article.time}}</p>
+        <p>{{article.body}}</p>
+      </div>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,11 @@
+from django.contrib import admin
+from django.conf.urls import url, include
+from . import views
+
+
+urlpatterns = [
+    url(r'admin/', admin.site.urls),
+    url(r'^articles/', include('Articles.urls')),
+    url(r'^$', views.homepage_view),
+    url(r'^about/$', views.about_view),
+]
