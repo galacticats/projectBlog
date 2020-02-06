@@ -14,7 +14,7 @@ header{
     text-align: center;
 }
 
-section{
+#pageBody{
     margin: 50px auto;
     max-width: 900px;
     width: 80vw;
@@ -66,22 +66,30 @@ h1{
     margin-bottom: 25px;
 }
 
-.paragraphLink{
+.articleLink{
     animation-name: none;
     border: none;
     color: #437E5E;
-    font-size: 1em;
+    font-family: "Poiret One", cursive;
+    font-size: 1.3em;
+    font-weight: 600;
     padding: 0;
     margin: 0;
-    text-decoration: underline;
 }
 
-.paragraphLink:hover{
-    animation: paragraphLinkHover 150ms forwards;
+.articleLink:hover{
+    animation: articleLinkHover 150ms forwards;
 }
 
-@keyframes paragraphLinkHover{
+@keyframes articleLinkHover{
     to{
         color: #3CB572;
     }
+}
+
+.articleBox{
+    border: 1px solid #437E5E;
+    border-radius: 10px;
+    margin: 25px 0;
+    padding: 0 10px;
 }

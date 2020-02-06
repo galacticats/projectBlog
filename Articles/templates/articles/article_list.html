@@ -5,23 +5,30 @@
   <head>
     <meta charset="utf-8">
     <title>Article List</title>
+    <link rel="stylesheet" href="{% static 'articleListTheme.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>Hello, World: A Project Blog</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Articles</a>
-        <a href="#">Contact</a>
+        <!--Change the sign up/log in to log out when needed-->
+        <a href="#">Sign Up</a>
+        <a href="#">Log In</a>
+        <a href="../about">About</a>
+        <a href="../articles">Articles</a>
       </nav>
     </header>
-    {% for article in articles %}
-      <div class="articleBox">
-        <h2><a href="#">{{article.title}}</a></h2>
-        <p>{{article.date}}</p>
-        <p>{{article.getSnippet}}</p>
-      </div>
-    {% endfor %}
+    <div id="pageBody">
+      <h2>Article List</h2>
+      <hr>
+      {% for article in articles %}
+        <div class="articleBox">
+          <p><a href="#" class="articleLink">{{article.title}}</a></p>
+          <p>{{article.date}}</p>
+          <p>{{article.getSnippet}}</p>
+        </div>
+      {% endfor %}
+    </div>
   </body>
 </html>
