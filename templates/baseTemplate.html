@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% block head %}
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Hello, World: A Project Blog</h1>
+      <nav>
+        <!--Change the sign up/log in to log out when needed-->
+        <a href="#">Sign Up</a>
+        <a href="#">Log In</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'articles' %}">Articles</a>
+      </nav>
+    </header>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

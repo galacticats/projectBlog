@@ -14,7 +14,7 @@ header{
     text-align: center;
 }
 
-section{
+#content{
     margin: 50px auto;
     max-width: 900px;
     width: 80vw;
