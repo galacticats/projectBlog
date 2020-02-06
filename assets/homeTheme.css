@@ -1,0 +1,43 @@
+html{
+    background-color: #181818;
+    height: 40vh;
+    padding: 30vh 0;
+    text-align: center;
+    width: 100vw;
+}
+
+h1{
+    color: #3CB572;
+    font-family: "Poiret One", cursive;
+    font-size: 2.5em;
+}
+
+h2{
+    color: #437E5E;
+    font-family: "Poiret One", cursive;
+    font-size: 1.5em;
+    margin-bottom: 26.8px;
+}
+
+a{
+    background-color: transparent;
+    border: 2px solid #3CB572;
+    border-radius: 7px;
+    color: #696969;
+    font-size: 1.15em;
+    font-family: "Montserrat", sans-serif;
+    margin: 0 3px; 
+    padding: 1px 5px;
+    text-decoration: none;
+}
+
+a:hover{
+    animation: linkHover 200ms forwards;
+}
+
+@keyframes linkHover{
+    to{
+        border: 2px solid #3CB572;
+        color: lightgray;
+    }
+}

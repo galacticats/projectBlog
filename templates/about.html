@@ -1,22 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>About This Blog</title>
+    <title>Hello, World: About</title>
+    <link rel="stylesheet" href="{% static 'aboutTheme.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>Hello, World: A Project Blog</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Articles</a>
-        <a href="#">Contact</a>
+        <a href="#">Sign Up</a>
+        <a href="#">Log In</a>
+        <a href="about">About</a>
+        <a href="articles">Articles</a>
       </nav>
     </header>
     <section>
-      <p>Hi, I'm Bianca! This blog is here to showcase my personal projects and class projects.
-        The blog itself is a project created out of a desire to learn Django, and uses the Django tutorials
-        from TheNetNinja as reference. Feel free to look around and see what I'm up to these days!
+      <p>
+        Hello, World is a blog that allows users to share their code creations
+        with other users. All hardware projects, software projects, and creators are 
+        welcome to post here, whether they're young or old, experienced or just 
+        starting out. Showcase your creations, gain inspiration, and learn from
+        your peers!
       </p>
     </section>
   </body>
