@@ -1,0 +1,15 @@
+{% extends 'baseTemplate.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Hello, World: {{article.title}}</title>
+    <link rel="stylesheet" href="{% static 'articleDetailTheme.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h2>{{article.title}}</h2>
+    <hr>
+    <p>{{article.date}}</p>
+    <img src="{{article.picture.url}}"/>
+    <p>{{article.body}}</p>
+{% endblock %}

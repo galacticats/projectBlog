@@ -6,8 +6,7 @@ class Article(models.Model):
     date = models.DateTimeField(auto_now_add = True)
     body = models.TextField()
     slug = models.SlugField()
-    #picture = [look up later]
-
+    picture = models.ImageField(default="defaultPic.png", blank="True")
 
     def __str__(self):
         return self.title
