@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^articles/', include('Articles.urls')),
     url(r'^$', views.homepage_view),
     url(r'^about/$', views.about_view, name='about'),
+    url(r'^accounts/', include('Accounts.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

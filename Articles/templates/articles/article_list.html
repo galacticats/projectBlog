@@ -11,8 +11,9 @@
   <hr>
   {% for article in articles %}
     <div class="articleBox">
-      <p><a href="{% url 'articleDetail' slug=article.slug %}" class="articleLink">{{article.title}}</a></p>
+      <p><a href="{% url 'articles:articleDetail' slug=article.slug %}" class="articleLink">{{article.title}}</a></p>
       <p>{{article.date}}</p>
+      <p>Author: {{article.author}}</p>
       <p>{{article.getSnippet}}</p>
     </div>
   {% endfor %}

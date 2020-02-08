@@ -1,0 +1,16 @@
+{% extends 'baseTemplate.html' %}
+{% load static %}
+
+{% block head %}
+<title>Hello, World: Sign Up</title>
+<link rel="stylesheet" href="{% static 'signupTheme.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Sign Up</h2>>
+<form action="/accounts/signup/" method="post">
+    {% csrf_token %}
+    {{form}}
+    <input id="submitButton" type="submit" value="Sign Up">
+</form>
+{% endblock %}

@@ -33,7 +33,7 @@ hr{
     margin: 20px 0;
 }
 
-p, ul{
+p, ul, .articleMeta{
     color: #808080;
     font-family: "Montserrat", sans-serif;
 }
@@ -75,4 +75,19 @@ img{
     max-width: 100%;
     padding: 0;
     width: 80vw;
+}
+
+#articleHeader{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.articleMeta{
+    display: inline-block;
+    padding: 0;
+    margin: 0 0 16px;
 }

@@ -13,10 +13,10 @@
       <h1>Hello, World: A Project Blog</h1>
       <nav>
         <!--Change the sign up/log in to log out when needed-->
-        <a href="#">Sign Up</a>
+        <a href="{% url 'accounts:signup' %}">Sign Up</a>
         <a href="#">Log In</a>
         <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'articles' %}">Articles</a>
+        <a href="{% url 'articles:articles' %}">Articles</a>
       </nav>
     </header>
     <div id="content">
