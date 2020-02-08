@@ -71,14 +71,43 @@ form{
 }
 
 #signupForm{
+    align-items: left;
+    border: 2px solid #3CB572;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 350px;
     justify-content: space-around;
-    align-items: left;
+    padding: 25px 5vw;
 }
 
 #submitButton{
-    margin-top: 16px;
+    border: 2px solid #3CB572;
+    border-radius: 10px;
+    color: #3CB572;
+    margin-top: 20px;
+}
+
+label{
+    margin: 15px 0 5px;
+}
+
+input{
+    padding: 3px 2px;
+}
+
+.helptext{
+    font-size: .8em;
+    margin: -10px 0 0;
+}
+
+.errorlist{
+    color:#D91E18;
+    font-size: .8em;
+    margin: 3px 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0 20px 10px;
 }

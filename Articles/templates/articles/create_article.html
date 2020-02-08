@@ -1,0 +1,17 @@
+{% extends 'baseTemplate.html' %}
+{% load static %}
+
+{% block head %}
+<title>Hello, World: Create Article</title>
+<link rel="stylesheet" href="{% static 'createArticleTheme.css'%}">
+{% endblock %}
+
+{% block content %}
+<h2>Create Article</h2>
+<hr>
+<form id="newArticleForm" action="{% url 'articles:createArticle'%}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <input id="submitButton" type="submit" value="Create Article">
+</form>
+{% endblock %}

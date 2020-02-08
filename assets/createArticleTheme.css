@@ -70,8 +70,8 @@ form{
     display: inline-block;
 }
 
-#loginForm{
-    align-items: center;
+#newArticleForm{
+    align-items: left;
     border: 2px solid #3CB572;
     border-radius: 10px;
     display: flex;
@@ -91,13 +91,7 @@ label{
     margin-bottom: 5px;
 }
 
-input{
-    margin-bottom: 10px;
-    padding: 3px 2px;
-}
-
-.errorlist{
-    color: #D91E18;
-    font-size: .8em;
-    margin: 10px 0 13px;
+input, textarea{
+    margin-bottom: 15px;
+    padding: 5px 2px;
 }
