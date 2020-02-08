@@ -1,7 +1,7 @@
 html{
     background-color: #202020;
-    height: 100vh;
-    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
 }
 body{
     margin: -40px 0 0;
@@ -38,7 +38,7 @@ p, ul, .articleMeta{
     font-family: "Montserrat", sans-serif;
 }
 
-a{
+a, button{
     background-color: transparent;
     border: 2px solid #005031;
     border-radius: 7px;
@@ -50,7 +50,7 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+a:hover, button:hover{
     animation: linkHover 200ms forwards;
 }
 
@@ -74,7 +74,7 @@ img{
     margin: 0 auto;
     max-width: 100%;
     padding: 0;
-    width: 80vw;
+    width: calc(80vw - 4px);
 }
 
 #articleHeader{
@@ -90,4 +90,8 @@ img{
     display: inline-block;
     padding: 0;
     margin: 0 0 16px;
+}
+
+form{
+    display: inline-block;
 }

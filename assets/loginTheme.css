@@ -33,12 +33,12 @@ hr{
     margin: 20px 0;
 }
 
-p, ul{
+p, ul, form{
     color: #808080;
     font-family: "Montserrat", sans-serif;
 }
 
-a, button{
+a, button, #submitButton{
     background-color: transparent;
     border: 2px solid #005031;
     border-radius: 7px;
@@ -50,7 +50,7 @@ a, button{
     text-decoration: none;
 }
 
-a:hover, button:hover{
+a:hover, button:hover, #submitButton:hover{
     animation: linkHover 200ms forwards;
 }
 
@@ -66,26 +66,19 @@ h1{
     margin-bottom: 25px;
 }
 
-.paragraphLink{
-    animation-name: none;
-    border: none;
-    color: #437E5E;
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
-    text-decoration: underline;
-}
-
-.paragraphLink:hover{
-    animation: paragraphLinkHover 150ms forwards;
-}
-
-@keyframes paragraphLinkHover{
-    to{
-        color: #3CB572;
-    }
-}
-
 form{
     display: inline-block;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#submitButton{
+    margin-top: 16px;
 }
