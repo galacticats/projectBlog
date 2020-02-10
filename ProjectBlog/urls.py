@@ -9,7 +9,7 @@ from . import views
 urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'^articles/', include('Articles.urls')),
-    url(r'^$', views.homepage_view),
+    url(r'^$', views.homepage_view, name='home'),
     url(r'^about/$', views.about_view, name='about'),
     url(r'^accounts/', include('Accounts.urls')),
 ]

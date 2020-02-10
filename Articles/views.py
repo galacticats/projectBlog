@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import Article
 from . import forms
@@ -20,7 +21,23 @@ def create_article(request):
             db_Entry = form.save(commit=False)
             db_Entry.author = request.user
             db_Entry.save()
-            return redirect('articles:articles')
+            return redirect('articles:articleDetail', slug=db_Entry.slug)
     else:
         form = forms.ArticleForm()
     return render(request, 'articles/create_article.html', {'form':form})
+
+@login_required(login_url='/accounts/login/')
+def edit_article(request):
+    db_Entry = Article.objects.get(slug = request.POST.get('slug'))
+    return render(request, 'articles/edit_article.html', {"article":db_Entry})
+
+@login_required(login_url='/accounts/login/')
+def delete_article(request):
+    if request.method == "POST":
+        db_Entry = Article.objects.get(slug = request.POST.get('slug'))
+        db_Entry.delete()
+    return redirect('articles:articles')
+
+@login_required(login_url='/accounts/login/')
+def save_changes(request): 
+    return HttpResponse("Updating post and saving changes!")
