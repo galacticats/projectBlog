@@ -98,3 +98,9 @@ h1{
 form{
     display: inline-block;
 }
+
+.articleMeta{
+    font-size: 0.8em;
+    color: #606060;
+    margin: 3px 0;
+}

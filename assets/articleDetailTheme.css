@@ -78,19 +78,23 @@ img{
 }
 
 #articleHeader{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
+    font-size: 0.8em;
 }
 
-form, .dateAndEdit{
+.meta{
+    color: #606060;
+    margin: 3px 0;
+}
+
+form, .dateEAndEdit{
     display: inline-block;
+    margin: 0 0 10px;
 }
 
 .articleEdit{
     border: none;
-    color: #3CB572;
+    color: #437E5E;
     font-size: 1em;
+    padding: 0;
 }
+

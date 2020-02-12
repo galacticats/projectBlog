@@ -9,13 +9,17 @@
 {% block content %}
 <h2>Edit Article</h2>
 <hr>
-<form id="editForm" method="post" action="{% url 'articles:saveChanges' %}">
-    {% csrf_token %}
-    <button class="formButton" type="submit">Save Changes</button>
-</form>
-<form id="deleteForm" method="post" action="{% url 'articles:deleteArticle' %}">
-    {% csrf_token %}
-    <input type="hidden" name="slug" value="{{article.slug}}">
-    <button class="formButton" type="submit">Delete Article</button>
-</form>
+<div id="forms">
+    <form id="editForm" method="post" action="{% url 'articles:saveChanges' %}">
+        {% csrf_token %}
+        {{form}}
+        <input type="hidden" name="editSlug" value="{{slug}}">
+        <button id="editFormButton" class="formButton" type="submit">Save Changes</button>
+    </form>
+    <form id="deleteForm" method="post" action="{% url 'articles:deleteArticle' %}">
+        {% csrf_token %}
+        <input type="hidden" name="slug" value="{{slug}}">
+        <button id="deleteFormButton" class="formButton" type="submit">Delete Article</button>
+    </form>
+</div>
 {% endblock %}

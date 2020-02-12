@@ -38,7 +38,7 @@ p, ul, form{
     font-family: "Montserrat", sans-serif;
 }
 
-a, button, #submitButton{
+.navButton, button{
     background-color: transparent;
     border: 2px solid #005031;
     border-radius: 7px;
@@ -50,7 +50,7 @@ a, button, #submitButton{
     text-decoration: none;
 }
 
-a:hover, button:hover, #submitButton:hover{
+.navButton:hover, button:hover, #submitButton:hover{
     animation: linkHover 200ms forwards;
 }
 
@@ -70,17 +70,6 @@ form{
     display: inline-block;
 }
 
-#newArticleForm{
-    align-items: left;
-    border: 2px solid #3CB572;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    padding: 25px 5vw;
-}
-
 .formButton{
     border: 2px solid #3CB572;
     border-radius: 10px;
@@ -96,7 +85,47 @@ input, textarea{
     padding: 5px 2px;
 }
 
-#editForm, #deleteForm{
-    display: block;
-    margin-bottom: 16px;
+#editForm{
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 25px 5vw 15px;
+}
+
+#editFormButton{
+    align-self: center;
+    width: 100%;
+}
+
+#deleteForm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0 5vw;
+}
+
+#deleteFormButton{
+    border: 2px solid #D91E18;
+    color: #D91E18;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+input[type="checkbox"]{
+    margin: 5px 0;
+}
+
+label[for="picture-clear_id"]{
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 75px;
+}
+ 
+#forms{
+    border: 2px solid #3CB572;
+    border-radius: 10px;
+    padding-bottom: 25px;
 }

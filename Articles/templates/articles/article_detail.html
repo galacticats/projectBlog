@@ -10,17 +10,16 @@
     <h2>{{article.title}}</h2>
     <hr>
     <div id="articleHeader">
-        <p>Author: {{article.author}}</p>
-        <div>
-            <p class="dateAndEdit">{{article.date}}</p>
-            {% if request.user.is_authenticated and request.user == article.author %}
-                <form class="dateAndEdit" method="post" action="{% url 'articles:editArticle' %}">
-                    {% csrf_token %}
-                    <input type="hidden" name="slug" value="{{article.slug}}">
-                    <button class="articleEdit" type="submit">[Edit]</button>
-                </form>
-            {% endif %}
-        </div>
+        <p class="meta">Author: {{article.author}}</p>
+        <p class="meta">Published: {{article.dateP}}</p>
+        <p class="dateEAndEdit meta">Last Updated: {{article.dateE}}</p>
+        {% if request.user.is_authenticated and request.user == article.author %}
+            <form class="dateEAndEdit" method="post" action="{% url 'articles:editArticle' %}">
+                {% csrf_token %}
+                <input type="hidden" name="slug" value="{{article.slug}}">
+                <button class="articleEdit" type="submit">[Edit]</button>
+            </form>
+        {% endif %}
     </div>
     <img src="{{article.picture.url}}"/>
     <p>{{article.body}}</p>
