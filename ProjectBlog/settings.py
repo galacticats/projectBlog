@@ -25,7 +25,7 @@ SECRET_KEY = 'hst2e^3_)m*w8b(wewz&#t9_)!=lz+mnsnqyts98obu!f58a)4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["project-blog-eb-env.d4qkbpvmm4.us-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["project-blog-eb-env.d4qkbpvmm4.us-west-2.elasticbeanstalk.com", "127.0.0.1"]
 
 
 # Application definition
