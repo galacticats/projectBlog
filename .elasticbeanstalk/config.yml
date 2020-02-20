@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: blog-eb-env
+    environment: project-blog-eb-env
     group_suffix: null
 global:
   application_name: django-tutorial
