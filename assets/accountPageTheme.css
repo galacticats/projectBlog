@@ -1,0 +1,106 @@
+html{
+    background-color: #202020;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+body{
+    margin: -40px 0 0;
+    padding: 0;
+}
+
+header{
+    background-color: #3CB572;
+    padding: 75px 0 50px;
+    text-align: center;
+}
+
+#content{
+    margin: 50px auto;
+    max-width: 900px;
+    width: 80vw;
+}
+
+h2, h1{
+    color: #3CB572;
+    font-family: "Poiret One", cursive;
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+}
+
+hr{
+    border-color: #3CB572;
+    margin: 20px 0;
+}
+
+p, ul{
+    color: #808080;
+    font-family: "Montserrat", sans-serif;
+}
+
+a, button{
+    background-color: transparent;
+    border: 2px solid #005031;
+    border-radius: 7px;
+    color: #005031;
+    font-size: 1.15em;
+    font-family: "Montserrat", sans-serif;
+    margin: 0 3px; 
+    padding: 1px 5px;
+    text-decoration: none;
+}
+
+a:hover, button:hover{
+    animation: linkHover 200ms forwards;
+}
+
+@keyframes linkHover{
+    to{
+        color: white;
+    }
+}
+
+h1{
+    color: #202020;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
+
+.articleLink{
+    animation-name: none;
+    border: none;
+    color: #437E5E;
+    font-family: "Poiret One", cursive;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.articleLink:hover{
+    animation: articleLinkHover 150ms forwards;
+}
+
+@keyframes articleLinkHover{
+    to{
+        color: #3CB572;
+    }
+}
+
+.articleBox{
+    border: 1px solid #437E5E;
+    border-radius: 10px;
+    margin: 25px 0;
+    padding: 0 10px;
+    width: calc(100% - 22px)
+}
+
+form{
+    display: inline-block;
+}
+
+.articleMeta{
+    font-size: 0.8em;
+    color: #606060;
+    margin: 3px 0;
+}

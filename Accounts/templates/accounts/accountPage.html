@@ -1,2 +1,40 @@
-{% extends 'baseTemplate.html %}
+{% extends 'baseTemplate.html' %}
 {% load static %}
+
+{% block head %}
+<title>Hello World: Account</title>
+<link rel="stylesheet" href="{% static 'accountPageTheme.css'%}">
+{% endblock %}
+
+{% block content %}
+<h2>Hi, {{uname}}!</h2>
+<hr>
+<h2>Your Account</h2>
+<div id="accountOptions">
+    <form id="passwordForm" method="post" action="{% url 'accounts:changePassword' %}">
+        {% csrf_token %}
+        <label for="oldPassword">Old Password: </label>
+        <input type="password" name="oldPassword">
+        <label for="newPassword">New Password: </label>
+        <input type="password" name="newPassword">
+        <label for="confirmPassword">Confirm Password: </label>
+        <input type="password" name="confirmPassword">
+        <button id="passwordFormButton" class="formButton" type="submit">Change Password</button>
+    </form>
+    <form id="deleteForm" method="post" action="{% url 'accounts:deleteAccount' %}">
+        {% csrf_token %}
+        <button id="deleteFormButton" class="formButton" type="submit">Delete Account</button>
+    </form>
+</div>
+<h2>Your Articles</h2>
+{% for article in articles %}
+  <div class="articleBox">
+    <p><a href="{% url 'articles:articleDetail' slug=article.slug %}" class="articleLink">{{article.title}}</a></p>
+    <p class="articleMeta">Published: {{article.dateP}}</p>
+    <p class="articleMeta">Last Updated: {{article.dateE}}</p>
+    <p class="articleMeta">Author: {{article.author}}</p>
+    <p>{{article.getSnippet}}</p>
+  </div>
+{% endfor %}
+
+{% endblock %}
