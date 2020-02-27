@@ -11,6 +11,11 @@
 <hr>
 <h2>Your Account</h2>
 <div id="accountOptions">
+    <h3>Change Your Password</h3>
+    <p>Please keep your new password somewhere secure. Changing your password will log you out and you will have to log in again.</p>
+    {% if errorMessage is not None %}
+    <p id="error">{{errorMessage}}</p>
+    {% endif %}
     <form id="passwordForm" method="post" action="{% url 'accounts:changePassword' %}">
         {% csrf_token %}
         <label for="oldPassword">Old Password: </label>
@@ -21,7 +26,7 @@
         <input type="password" name="confirmPassword">
         <button id="passwordFormButton" class="formButton" type="submit">Change Password</button>
     </form>
-    <form id="deleteForm" method="post" action="{% url 'accounts:deleteAccount' %}">
+    <form id="deleteForm" method="post" action="{% url 'accounts:deleteAccount' %}" onsubmit="confirmDelete()">
         {% csrf_token %}
         <button id="deleteFormButton" class="formButton" type="submit">Delete Account</button>
     </form>
@@ -36,5 +41,5 @@
     <p>{{article.getSnippet}}</p>
   </div>
 {% endfor %}
-
+<script src="/static/confirm.js/"></script>
 {% endblock %}
