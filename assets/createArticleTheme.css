@@ -2,6 +2,7 @@ html{
     background-color: #202020;
     max-height: 100vh;
     max-width: 100vw;
+    min-width: 536px;
 }
 body{
     margin: -40px 0 0;
